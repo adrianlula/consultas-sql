@@ -1,0 +1,147 @@
+1  select *
+from customers;
+2  select contactname, city
+from customers;
+3    select contactname, country
+from customers
+where country = "Sweden"
+4   update suppliers set city="Sydney"
+where  companyname="Pavlova, Ltd.";
+5   select productid,productname, unitprice
+from products
+where unitprice=50;
+6   DELETE FROM PRODUCTS 
+WHERE UNITPRICE>50;
+7 select productid,productname,unitprice
+from products
+where unitprice<60 and unitprice>50
+ ORDER BY unitprice;
+8  
+INSERT INTO customers(companyname,contactname,city,country,phone)
+VALUES ("craing", "smith","new york","usa",1-01-993-2800);
+9   
+INSERT INTO customers(companyname,contactname)
+VALUES ("anita", "coats");
+10  
+11   update products set discontinued=1;
+12  update products set discontinued=0
+where unitprice>50;
+13  update products set discontinued=0
+where productid=46;
+14   update products set discontinued=0
+where productid<19 or productid>58;
+15  update suppliers  set city="oslo",phone="(0) 1-953530",fax="(0) 1-953555"
+where supplierid=15;
+16   DELETE FROM PRODUCTS 
+WHERE UNITPRICE<10;
+17  DELETE FROM CUSTOMERS
+WHERE COMPANYNAME="Sir Rodney´s Scones"
+18  select *
+from suppliers
+order by companyname;
+19 select *
+from customers
+order by city;
+select *
+from customers
+order by country;
+20 select *
+from suppliers
+where country ="USA" or country ="japan"   or country ="Germany"
+order by city;
+select *
+from suppliers
+where country ="USA" or country ="japan"   or country ="Germany"
+order by companyname desc ;
+21 select *
+from orders 
+order by orderdate desc;
+select *
+from orders 
+order by freight desc;
+22  select *
+from products
+order by unitprice desc
+limit 10;  
+23 select *
+from products
+order by unitprice 
+limit 56;
+24   
+25  select city
+from suppliers 
+order by city;
+26   select  count(distinct city)
+from suppliers;
+
+27 SELECT MIN(unitprice)
+FROM products;
+28 SELECT max(unitprice)
+FROM products;
+29  SELECT MAX(FREIGHT)
+FROM Orders 
+WHERE OrderDate<'2015-01-01' AND OrderDate>'2013-12-12'
+30   SELECT MAX(OrderDate)
+FROM Orders 
+WHERE OrderDate<'2014-01-01' AND OrderDate>'2012-12-12'
+31  select  count(LASTNAME)
+from EMPLOYEES;
+32  SELECT SUM(FREIGHT)
+FROM Orders 
+WHERE OrderDate<'2014-01-01' AND OrderDate>'2012-12-12'
+33  SELECT AVG(FREIGHT)
+FROM Orders 
+34  SELECT *
+FROM customers
+where contactname="Thomas Hardy";
+35   SELECT *
+FROM customers
+where country="Spain" or country="France"
+36    SELECT *
+FROM customers
+where country<>"USA"
+37  SELECT *
+FROM orders
+where freight>15000 or freight<200;
+38   SELECT *
+FROM orders
+where freight>100 or freight<10
+order by  freight;
+39  SELECT count(requireddate)
+FROM Orders 
+where requireddate<>null and OrderDate<'2013-01-01' AND OrderDate>'2013-01-31'
+SELECT count(shippeddate)
+FROM Orders 
+where requireddate<>null and OrderDate<'2013-01-01' AND OrderDate>'2013-01-31'
+
+40   SELECT *
+FROM products
+where unitprice<>10 and unitprice<>20 and unitprice<>30 and unitprice<>40 and unitprice<>50;
+41   
+select  customers.customerid as a, customers.country as b, suppliers.supplierid as c, suppliers.country as d
+from customers, suppliers
+where b=d;
+
+42 SELECT *
+FROM products
+where productname like "Ca%"
+43  SELECT *
+FROM products
+where productname like "Cha%" or productname like "Chan%"
+44  SELECT *
+FROM suppliers
+where fax=""
+45  SELECT *
+FROM suppliers
+where fax<>""
+46  
+47
+48 
+49 
+50
+51  
+
+
+
+
+
